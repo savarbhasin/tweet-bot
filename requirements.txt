@@ -2,9 +2,6 @@ langchain
 langchain-groq
 langchain-community
 langchain-core
-langgraph
 lanchain_openai
-nltk
 streamlit
-faiss-cpu
 langchain-chroma
