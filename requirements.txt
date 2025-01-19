@@ -7,3 +7,4 @@ lanchain_openai
 nltk
 streamlit
 faiss-cpu
+langchain-chroma
