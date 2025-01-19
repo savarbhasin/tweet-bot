@@ -2,13 +2,14 @@ import requests
 import json
 from langchain_core.documents import Document
 from chains import analytics_chain
-
+from dotenv import load_dotenv
+load_dotenv()
 def get_tweet_pid(tweet_url):
     tweet_id = tweet_url.split('/')[-1]
     url = f'https://twitter241.p.rapidapi.com/tweet?pid={tweet_id}'
     headers = {
         'x-rapidapi-host': 'twitter241.p.rapidapi.com',
-        'x-rapidapi-key': 'd0563e44cbmsh1712b206f453e0bp135497jsn8fd703c77ccf'
+        'x-rapidapi-key': os.getenv('RAPIDAPI_KEY')
     }
     tweet_data = requests.get(url, headers=headers)
     tweet_data = json.loads(tweet_data.text)
